@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/styles.css">
   
   <title>Frontend Mentor | Notifications page</title>
 
@@ -14,34 +15,149 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
+
 <body>
+  <header>
+    <div className="d-flex align-items-center px-3 mt-3 justify-content-between">
+      <h1 className="title-notification m-0">
+        Notifications <span className="number px-2 rounded-2 ms-2">3</span>
+      </h1>
+      <p className="right-text m-0">Mark all as read</p>
+    </div>
+  </header>
+  <div className="d-flex flex-column gap-2 p-2">
+    <div className="people-container active" onClick={handleRemoveActive}>
+      <img
+        className="avatar"
+        src="src/assets/images/avatar-mark-webber.webp"
+      ></img>
+      <div className="name-notification-post-time-container">
+        <div className="name-notification">
+          <h2 className="name">
+            Mark Webber
+            <span className="notification">
+              reacted to your recent post
+              <span className="post">My first tournament today!</span>
+            </span>
+          </h2>
+        </div>
+        <p className="text-start hour">1m ago</p>
+      </div>
+    </div>
 
-  Notifications 3
+    <div className="people-container active" onClick={handleRemoveActive}>
+      <img
+        className="avatar"
+        src="src/assets/images/avatar-angela-gray.webp"
+      ></img>
+      <div className="name-notification-post-time-container">
+        <div className="name-notification">
+          <h2 className="name">
+            Angela Gray
+            <span className="notification">followed you</span>
+          </h2>
+        </div>
+        <p className="text-start hour">5m ago</p>
+      </div>
+    </div>
 
-  Mark all as read
+    <div className="people-container active" onClick={handleRemoveActive}>
+      <img
+        className="avatar"
+        src="src/assets/images/avatar-jacob-thompson.webp"
+      ></img>
+      <div className="name-notification-post-time-container">
+        <div className="name-notification">
+          <h2 className="name">
+            Jacob Thompson
+            <span className="notification">
+              has joined your group <span className="group">Chess Club</span>
+            </span>
+          </h2>
+        </div>
+        <p className="text-start hour">1 day ago</p>
+      </div>
+    </div>
 
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
+    <div className="people-container">
+      <img
+        className="avatar"
+        src="src/assets/images/avatar-rizky-hasanuddin.webp"
+      ></img>
+      <div className="name-notification-post-time-container">
+        <div className="name-notification">
+          <h2 className="name">
+            Rizky Hasanuddin
+            <span className="notification">sent you a private message</span>
+            <p className="text-start hour">5 days ago</p>
+          </h2>
+        </div>
 
-  Angela Gray followed you
-  5m ago
+        <p className="comment p-2">
+          Hello, thanks for setting up the Chess Club. Ive been a member for a
+          few weeks now and I'm already having lots of fun and improving my
+          game.
+        </p>
+      </div>
+    </div>
 
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
+    <div className="people-container">
+      <img
+        className="avatar"
+        src="src/assets/images/avatar-kimberly-smith.webp"
+      ></img>
+      <div className="name-notification-post-time-container">
+        <div className="name-notification">
+          <h2 className="name">
+            Kimberly Smith
+            <span className="notification">commented on your picture</span>
+          </h2>
+        </div>
 
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
+        <p className="text-start hour">1 week ago</p>
+      </div>
+      <img className="chess" src="src/assets/images/image-chess.webp" />
+    </div>
 
-  Kimberly Smith commented on your picture
-  1 week ago
+    <div className="people-container">
+      <img
+        className="avatar"
+        src="src/assets/images/avatar-nathan-peterson.webp"
+      ></img>
+      <div className="name-notification-post-time-container">
+        <div className="name-notification">
+          <h2 className="name">
+            Nathan Peterson
+            <span className="notification">
+              reacted to your recent post
+              <span className="post">
+                5 end-game strategies to increase your win rate
+              </span>
+            </span>
+          </h2>
+        </div>
+        <p className="text-start hour">2 weeks ago</p>
+      </div>
+    </div>
 
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
-
-  Anna Kim left the group Chess Club
-  2 weeks ago
+    <div className="people-container">
+      <img
+        className="avatar"
+        src="src/assets/images/avatar-anna-kim.webp"
+      ></img>
+      <div className="name-notification-post-time-container">
+        <div className="name-notification">
+          <h2 className="name">
+            Anna Kim
+            <span className="notification">
+              left the group <span className="group">Chess Club</span>
+            </span>
+          </h2>
+        </div>
+        <p className="text-start hour">2 weeks ago</p>
+      </div>
+    </div>
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
