@@ -2,166 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="/styles.css">
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>Frontend Mentor | Notifications page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 
 <body>
-  <header>
-    <div className="d-flex align-items-center px-3 mt-3 justify-content-between">
-      <h1 className="title-notification m-0">
-        Notifications <span className="number px-2 rounded-2 ms-2">3</span>
-      </h1>
-      <p className="right-text m-0">Mark all as read</p>
-    </div>
-  </header>
-  <div className="d-flex flex-column gap-2 p-2">
-    <div className="people-container active" onClick={handleRemoveActive}>
-      <img
-        className="avatar"
-        src="src/assets/images/avatar-mark-webber.webp"
-      ></img>
-      <div className="name-notification-post-time-container">
-        <div className="name-notification">
-          <h2 className="name">
-            Mark Webber
-            <span className="notification">
-              reacted to your recent post
-              <span className="post">My first tournament today!</span>
-            </span>
-          </h2>
+  <main>
+    <div class="main-container p-3 ">
+      <header>
+        <div class="d-flex align-items-center px-3 mb-3 justify-content-between">
+          <h1 class="title-notification m-0">
+            Notifications <span id="number" class="number px-2 rounded-2 ms-2"></span>
+          </h1>
+          <p id="all-read" class="right-text m-0">Mark all as read</p>
         </div>
-        <p className="text-start hour">1m ago</p>
+      </header>
+      <div class="d-flex flex-column gap-2 p-2">
+        <!-- Notificaciones -->
+        <div class="people-container active">
+          <img class="avatar" src="/assets/images/avatar-mark-webber.webp"></img>
+          <div class="name-notification-post-time-container">
+            <div class="name-notification d-flex">
+              <h2 class="name">
+                Mark Webber
+                <span class="notification">
+                  reacted to your recent post
+                  <span class="post">My first tournament today!<div class="dot rounded-2"></div></span>
+                </span>
+              </h2>
+              
+            </div>
+            <p class="text-start hour">1m ago</p>
+          </div>
+        </div>
+        <div class="people-container active">
+          <img class="avatar" src="/assets/images/avatar-angela-gray.webp"></img>
+          <div class="name-notification-post-time-container">
+            <div class="name-notification">
+              <h2 class="name">
+                Angela Gray
+                <span class="notification">followed you <div class="dot rounded-2"></div></span>
+              </h2>
+            </div>
+            <p class="text-start hour">5m ago</p>
+          </div>
+        </div>
+        <div class="people-container active">
+          <img class="avatar" src="/assets/images/avatar-jacob-thompson.webp"></img>
+          <div class="name-notification-post-time-container">
+            <div class="name-notification">
+              <h2 class="name">
+                Jacob Thompson
+                <span class="notification">
+                  has joined your group <span class="group">Chess Club<div class="dot rounded-2"></div></span>
+                </span>
+              </h2>
+            </div>
+            <p class="text-start hour">1 day ago</p>
+          </div>
+        </div>
+        <div class="people-container">
+          <img class="avatar" src="/assets/images/avatar-rizky-hasanuddin.webp"></img>
+          <div class="name-notification-post-time-container">
+            <div class="name-notification">
+              <h2 class="name">
+                Rizky Hasanuddin
+                <span class="notification">sent you a private message</span>
+                <p class="text-start hour">5 days ago</p>
+              </h2>
+            </div>
+            <p class="comment p-2">
+              Hello, thanks for setting up the Chess Club. Ive been a member for a
+              few weeks now and I'm already having lots of fun and improving my
+              game.
+            </p>
+          </div>
+        </div>
+        <div class="people-container">
+          <img class="avatar" src="/assets/images/avatar-kimberly-smith.webp"></img>
+          <div class="name-notification-post-time-container">
+            <div class="name-notification">
+              <h2 class="name">
+                Kimberly Smith
+                <span class="notification">commented on your picture</span>
+              </h2>
+            </div>
+            <p class="text-start hour">1 week ago</p>
+          </div>
+          <img class="chess" src="/assets/images/image-chess.webp" />
+        </div>
+        <div class="people-container">
+          <img class="avatar" src="/assets/images/avatar-nathan-peterson.webp"></img>
+          <div class="name-notification-post-time-container">
+            <div class="name-notification">
+              <h2 class="name">
+                Nathan Peterson
+                <span class="notification">
+                  reacted to your recent post
+                  <span class="post">
+                    5 end-game strategies to increase your win rate
+                  </span>
+                </span>
+              </h2>
+            </div>
+            <p class="text-start hour">2 weeks ago</p>
+          </div>
+        </div>
+        <div class="people-container">
+          <img class="avatar" src="/assets/images/avatar-anna-kim.webp"></img>
+          <div class="name-notification-post-time-container">
+            <div class="name-notification">
+              <h2 class="name">
+                Anna Kim
+                <span class="notification">
+                  left the group <span class="group">Chess Club</span>
+                </span>
+              </h2>
+            </div>
+            <p class="text-start hour">2 weeks ago</p>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div className="people-container active" onClick={handleRemoveActive}>
-      <img
-        className="avatar"
-        src="src/assets/images/avatar-angela-gray.webp"
-      ></img>
-      <div className="name-notification-post-time-container">
-        <div className="name-notification">
-          <h2 className="name">
-            Angela Gray
-            <span className="notification">followed you</span>
-          </h2>
-        </div>
-        <p className="text-start hour">5m ago</p>
-      </div>
-    </div>
-
-    <div className="people-container active" onClick={handleRemoveActive}>
-      <img
-        className="avatar"
-        src="src/assets/images/avatar-jacob-thompson.webp"
-      ></img>
-      <div className="name-notification-post-time-container">
-        <div className="name-notification">
-          <h2 className="name">
-            Jacob Thompson
-            <span className="notification">
-              has joined your group <span className="group">Chess Club</span>
-            </span>
-          </h2>
-        </div>
-        <p className="text-start hour">1 day ago</p>
-      </div>
-    </div>
-
-    <div className="people-container">
-      <img
-        className="avatar"
-        src="src/assets/images/avatar-rizky-hasanuddin.webp"
-      ></img>
-      <div className="name-notification-post-time-container">
-        <div className="name-notification">
-          <h2 className="name">
-            Rizky Hasanuddin
-            <span className="notification">sent you a private message</span>
-            <p className="text-start hour">5 days ago</p>
-          </h2>
-        </div>
-
-        <p className="comment p-2">
-          Hello, thanks for setting up the Chess Club. Ive been a member for a
-          few weeks now and I'm already having lots of fun and improving my
-          game.
-        </p>
-      </div>
-    </div>
-
-    <div className="people-container">
-      <img
-        className="avatar"
-        src="src/assets/images/avatar-kimberly-smith.webp"
-      ></img>
-      <div className="name-notification-post-time-container">
-        <div className="name-notification">
-          <h2 className="name">
-            Kimberly Smith
-            <span className="notification">commented on your picture</span>
-          </h2>
-        </div>
-
-        <p className="text-start hour">1 week ago</p>
-      </div>
-      <img className="chess" src="src/assets/images/image-chess.webp" />
-    </div>
-
-    <div className="people-container">
-      <img
-        className="avatar"
-        src="src/assets/images/avatar-nathan-peterson.webp"
-      ></img>
-      <div className="name-notification-post-time-container">
-        <div className="name-notification">
-          <h2 className="name">
-            Nathan Peterson
-            <span className="notification">
-              reacted to your recent post
-              <span className="post">
-                5 end-game strategies to increase your win rate
-              </span>
-            </span>
-          </h2>
-        </div>
-        <p className="text-start hour">2 weeks ago</p>
-      </div>
-    </div>
-
-    <div className="people-container">
-      <img
-        className="avatar"
-        src="src/assets/images/avatar-anna-kim.webp"
-      ></img>
-      <div className="name-notification-post-time-container">
-        <div className="name-notification">
-          <h2 className="name">
-            Anna Kim
-            <span className="notification">
-              left the group <span className="group">Chess Club</span>
-            </span>
-          </h2>
-        </div>
-        <p className="text-start hour">2 weeks ago</p>
-      </div>
-    </div>
-  </div>
-  
+    
+  </main>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/cristianccgg">Cristian Gutierrez</a>.
   </div>
+  <script src="/app.js"></script>
 </body>
 </html>

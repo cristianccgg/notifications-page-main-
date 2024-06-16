@@ -1,21 +1,23 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 :root {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 500;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   /* ## Colors */
-
   /* ### Primary */
-
   --Red: hsl(1, 90%, 64%);
   --Blue: hsl(219, 85%, 26%);
 
   /* ### Neutral */
-
   --White: hsl(0, 0%, 100%);
   --Very-light-grayish-blue: hsl(210, 60%, 98%);
   --Light-grayish-blue-1: hsl(211, 68%, 94%);
@@ -26,44 +28,52 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  background-color: var(--Red) !important;
+  margin: 0;
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  width: 90%; /* Ajustar según el diseño deseado */
+  max-width: 800px; /* Para que no se expanda demasiado */
   padding: 20px;
-  box-sizing: border-box;
-  background-color: white;
-}
-/* Incluye el padding y el borde dentro del ancho y alto total del elemento */
-
-/* app.css o el archivo CSS que corresponda */
-
-/* Estilos para pantallas pequeñas */
-@media (max-width: 375px) {
-  .container {
-    padding: 0 10px; /* Reduce el padding en pantallas pequeñas */
-  }
+  background-color: var(--White);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px; /* Añadir un margen para el espacio alrededor del main */
+  flex-grow: 1;
+  border-radius: 10px;
 }
 
-/* Estilos para pantallas medianas */
-@media (min-width: 768px) {
-  .container {
-    padding: 0 20px; /* Aumenta el padding en pantallas medianas */
-  }
+.main-container {
+  width: 100%;
 }
 
-/* Estilos para pantallas grandes */
-@media (min-width: 1200px) {
-  .container {
-    padding: 0 40px; /* Aumenta el padding en pantallas grandes */
-  }
+.title-notification {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.number {
+  background-color: var(--Blue);
+  color: white;
+}
+
+.right-text {
+  font-size: 0.8rem;
+  color: hsl(219, 14%, 63%);
+  font-weight: 600;
+}
+
+.right-text:hover {
+  color: var(--Blue);
 }
 
 .people-container {
@@ -72,6 +82,7 @@ body {
   gap: 10px;
   background-color: hsl(210, 60%, 98%);
   padding: 15px;
+  border-radius: 10px;
 }
 
 .name-notification-post-time-container {
@@ -86,26 +97,24 @@ body {
 }
 
 .name-notification {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 .name {
   font-size: 0.8rem;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-weight: 800;
   color: hsl(224, 21%, 14%);
-  text-wrap: nowrap;
 }
 
 .notification {
   color: hsl(219, 12%, 42%);
   font-weight: 500;
   margin-left: 5px;
-  text-wrap: wrap;
 }
 
 .active {
-  background-color: hsl(205, 33%, 90%);
+  background-color: hsl(206, 18%, 92%);
 }
 
 .group {
@@ -118,11 +127,23 @@ body {
   color: hsl(218, 28%, 38%);
   font-weight: 800;
   margin-left: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.dot {
+  background-color: var(--Red);
+  color: var(--Red);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
 }
 
 .hour {
   font-size: 0.8rem;
-  margin: 0px;
+  margin: 0;
   font-weight: 600;
   color: hsl(219, 14%, 63%);
 }
@@ -140,4 +161,29 @@ body {
 
 .comment:hover {
   background-color: hsl(219, 47%, 88%);
+}
+
+.attribution {
+  text-align: center;
+  font-size: 0.8rem;
+  color: white;
+  margin-top: auto;
+}
+
+@media (max-width: 375px) {
+  .main-container {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-container {
+    padding: 40px;
+  }
 }
