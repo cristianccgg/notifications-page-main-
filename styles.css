@@ -32,7 +32,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   background-color: var(--Red) !important;
   padding: 1%;
 }
@@ -43,7 +43,7 @@ main {
   justify-content: space-between;
   font-family: "Plus Jakarta Sans", sans-serif;
   min-height: 100%;
-  max-width: 800px; /* Para que no se expanda demasiado */
+  max-width: 700px; /* Para que no se expanda demasiado */
   background-color: var(--White);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 20px; /* Añadir un margen para el espacio alrededor del main */
@@ -160,13 +160,6 @@ main {
 
 .comment:hover {
   background-color: hsl(219, 47%, 88%);
-}
-
-.attribution {
-  text-align: center;
-  font-size: 0.8rem;
-  color: white;
-  margin-top: auto;
 }
 
 @media (max-width: 375px) {
