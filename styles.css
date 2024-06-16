@@ -34,21 +34,22 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: var(--Red) !important;
-  margin: 0;
+  padding: 1%;
 }
 
 main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   font-family: "Plus Jakarta Sans", sans-serif;
-  width: 90%; /* Ajustar según el diseño deseado */
+
+  height: fit-content;
   max-width: 800px; /* Para que no se expanda demasiado */
-  padding: 20px;
   background-color: var(--White);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 20px; /* Añadir un margen para el espacio alrededor del main */
-  flex-grow: 1;
+
   border-radius: 10px;
 }
 
